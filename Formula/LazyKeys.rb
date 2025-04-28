@@ -1,8 +1,8 @@
 class Lazykeys < Formula
   desc "LazyKeys - Remap capslock to something useful"
   homepage "https://github.com/frostplexx/LazyKeys"
-  url "https://github.com/frostplexx/LazyKeys/releases/download/v0.0.1/lazykeys.tar.gz"
-  sha256 "98cb3b38d9899a6e89737bbcbb404f9f677d58687dd66ecb30945cf589795219"
+  url "https://github.com/frostplexx/LazyKeys/releases/download/v1.0.0/lazykeys.tar.gz"
+  sha256 "2ead3d37b79a66b906fa2c1fb0ec1168c6c93e1e3c970da4451acf2466d81552"
   
   depends_on :macos
 
