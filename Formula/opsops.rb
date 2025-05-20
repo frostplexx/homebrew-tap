@@ -17,16 +17,18 @@ class Opsops < Formula
 
   def install
     bin.install Dir["opsops-*"].first => "opsops"
-  end
 
-  def caveats
-    <<~EOS
-      To use opsops as a service:
-        brew services start opsops
-        
-      To stop the service:
-        brew services stop opsops
-    EOS
+    # Generate and install docs
+    doc_dir = buildpath/"doc_output"
+    mkdir_p doc_dir
+    system bin/"opsops", "generate-docs", "--dir", doc_dir
+    
+    # Install man pages
+    man1.install doc_dir/"man/opsops.1"
+    
+    # Install fish completions
+    fish_completion.install doc_dir/"completions/opsops.fish"
+    end
   end
 
   test do
