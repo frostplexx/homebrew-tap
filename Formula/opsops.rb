@@ -1,7 +1,7 @@
 class Opsops < Formula
   desc "A wrapper for sops that integrates 1Password"
   homepage "https://github.com/frostplexx/opsops"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.arm?
