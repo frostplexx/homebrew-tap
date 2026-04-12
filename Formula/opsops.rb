@@ -20,7 +20,7 @@ class Opsops < Formula
 
     # Generate and install docs
     doc_dir = buildpath/"doc_output"
-    mkdir_p doc_dir
+    doc_dir.mkpath doc_dir
     system bin/"opsops", "generate-docs", "--dir", doc_dir
     
     # Install man pages
@@ -34,4 +34,3 @@ class Opsops < Formula
   test do
     system "#{bin}/opsops", "--version"
   end
-end
